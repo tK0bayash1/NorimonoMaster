@@ -16,6 +16,7 @@ public class Road : MonoBehaviour
     void Update()
     {
         offset_x += speed_x;
+        offset_x += offset_x < 1.0f ? 0 : -1.0f;
         _mat.SetTextureOffset("_MainTex", new Vector2(offset_x, 0));
     }
 }
