@@ -11,11 +11,20 @@ public class ShopMain : MonoBehaviour
     [SerializeField]
     private Sprite[] CarsTexture = new Sprite[7]; //表示用の画像
     [SerializeField]
+    private Sprite Box; //初期の画像
+    [SerializeField]
     private Text GetName; //入手時のメッセージ
+    [SerializeField]
+    private Text MoneyText; //所持金表示
+    [SerializeField]
+    private Text ButtonText;
     [SerializeField]
     private Image Prize; //取得物表示用のオブジェクト
     static public int Money { get; set; } //所持金
     public int Cost;
+    public float ShopWaitTime = 0.2f;
+    private bool GetFlag;
+    private bool Running = false;
     // Start is called before the first frame update
 
     public IEnumerator DelayMove(float waitTime, int i)
@@ -33,14 +42,26 @@ public class ShopMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        MoneyText.text = "所持金 " + Money;
     }
 
     public void BuyNewCars()
     {
-        Money -= Cost;
-        GetName.text = "LaLaLaLa...";
-        Production(0);
+        if (GetFlag == false && Running == false)
+        {
+            Running = true;
+            Money -= Cost;
+            GetName.text = "LaLaLaLa...";
+            Production(0);
+        }
+        else if (Running == false)
+        {
+
+            Prize.sprite = Box;
+            GetName.text = "ButtonClick!";
+            ButtonText.text = "Buy!";
+            GetFlag = false;
+        }
 
     }
 
@@ -54,11 +75,14 @@ public class ShopMain : MonoBehaviour
             GetName.text = string.Format("Item :{0} Get!", cars[GetItem]);
             BoardingPermission[GetItem] = true;
             Debug.Log(GetItem);
+            GetFlag = true;
+            Running = false;
+            ButtonText.text = "Next";
         }
         else
         {
             i++;
-            StartCoroutine(DelayMove(0.2f, i));
+            StartCoroutine(DelayMove(ShopWaitTime, i));
         }
     }
 }
