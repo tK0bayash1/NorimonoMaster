@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assets.Script
+{
+    class Vehicle
+    {
+        public float JumpPower { private set; get; }
+        public float CanJumpTimes{ private set; get; }
+    }
+}
