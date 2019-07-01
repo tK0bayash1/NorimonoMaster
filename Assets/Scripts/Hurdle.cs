@@ -15,7 +15,7 @@ public abstract class Hurdle : MonoBehaviour
 
     protected void Update()
     {
-        if (HurdleSystem.Player.transform.position.x + offset_X > transform.position.x)
+        if (GameSceneManager.player.transform.position.x + offset_X > transform.position.x)
         {
             Destroy(this.gameObject);
         }

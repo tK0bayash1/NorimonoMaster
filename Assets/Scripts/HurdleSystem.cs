@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class HurdleSystem : MonoBehaviour
 {
-    [SerializeField] PlayerController _player;
-    static public PlayerController Player;
     [SerializeField] Hurdle[] hurdleTypes;
 
     [SerializeField, Header("Pop Timing")]
@@ -14,11 +12,6 @@ public class HurdleSystem : MonoBehaviour
     float randomDeviationWidth; //ポップタイミングのランダムずらしの差分MAX
 
     private float _timer;
-    
-    void Awake()
-    {
-        Player = _player;
-    }
 
     void Start()
     {

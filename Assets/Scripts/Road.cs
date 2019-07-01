@@ -16,7 +16,7 @@ public class Road : MonoBehaviour
     
     void Update()
     {
-        if(HurdleSystem.Player.transform.position.x > children[leftIndex].transform.position.x + offset)
+        if(GameSceneManager.player.transform.position.x > children[leftIndex].transform.position.x + offset)
         {
             children[leftIndex].transform.position += Vector3.right * 2 * dis_x;
             leftIndex = leftIndex ^ 1;
