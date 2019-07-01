@@ -7,7 +7,7 @@ public class Road : MonoBehaviour
     float dis_x;
     [SerializeField] GameObject[] children;
     int leftIndex;
-    [SerializeField] float offset;
+    [SerializeField] float offset = 15;
     void Start()
     {
         leftIndex = 0;

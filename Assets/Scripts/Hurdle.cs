@@ -6,6 +6,7 @@ public abstract class Hurdle : MonoBehaviour
 {
     [SerializeField]
     Sprite _sprite;
+    [SerializeField] float offset_X = -20;
 
     protected void Start()
     {
@@ -14,7 +15,7 @@ public abstract class Hurdle : MonoBehaviour
 
     protected void Update()
     {
-        if (HurdleSystem.Player.transform.position.x > transform.position.x)
+        if (HurdleSystem.Player.transform.position.x + offset_X > transform.position.x)
         {
             Destroy(this.gameObject);
         }

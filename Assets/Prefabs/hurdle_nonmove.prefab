@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprite: {fileID: 21300000, guid: 1a2ccea546d09f64fb0d83a619d9727b, type: 3}
+  offset_X: -20
 --- !u!50 &5355081805406382626
 Rigidbody2D:
   serializedVersion: 4
