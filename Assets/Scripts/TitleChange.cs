@@ -12,6 +12,9 @@ public class TitleChange : MonoBehaviour
     [SerializeField]
     private Button _shopButton;
 
+    [SerializeField]
+    private Button _collection;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,10 @@ public class TitleChange : MonoBehaviour
         var shop = new Button.ButtonClickedEvent(); //shopボタン
         shop.AddListener(ShopOnClick);
         _shopButton.onClick = shop;
+
+        var collection = new Button.ButtonClickedEvent(); // collectionボタン
+        collection.AddListener(CollectionOnClick);
+        _collection.onClick = collection;
 
      
 
@@ -39,7 +46,10 @@ public class TitleChange : MonoBehaviour
     }
 
  
-
+    public void CollectionOnClick()
+    {
+        SceneManager.LoadScene("Collection");
+    }
  
 }
 
