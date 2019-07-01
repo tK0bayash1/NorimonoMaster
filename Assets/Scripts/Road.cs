@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Road : MonoBehaviour
 {
-    [SerializeField] float speed_x;
-    Material _mat;
-    float offset_x;
+    float dis_x;
+    [SerializeField] GameObject[] children;
+    int leftIndex;
+    [SerializeField] float offset;
     void Start()
     {
-        _mat = GetComponent<SpriteRenderer>().material;
-        Debug.Log(_mat);
+        leftIndex = 0;
+        dis_x = children[1].transform.position.x - children[0].transform.position.x;
     }
     
     void Update()
     {
-        offset_x += speed_x;
-        offset_x += offset_x < 1.0f ? 0 : -1.0f;
-        _mat.SetTextureOffset("_MainTex", new Vector2(offset_x, 0));
+        if(HurdleSystem.Player.transform.position.x > children[leftIndex].transform.position.x + offset)
+        {
+            children[leftIndex].transform.position += Vector3.right * 2 * dis_x;
+            leftIndex = leftIndex ^ 1;
+        }
     }
 }
