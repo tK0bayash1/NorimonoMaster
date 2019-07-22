@@ -33,7 +33,6 @@ public class CarsStatus : MonoBehaviour
             UpdateCars();
         if (AcceptanceFlag)
             AcceptanceCars();
-        Debug.Log(CarsStatus.cars[0].Name);
     }
     public void UpdateCars()
     {
