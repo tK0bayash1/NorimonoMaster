@@ -25,22 +25,28 @@ public class CarsStatus : MonoBehaviour
 
     public static CarData[] cars = new CarData[10];
     public CarData[] carData = new CarData[10];
-    // Start is called before the first frame update
-    void Start()
+    public bool AcceptanceFlag;
+    public bool UpdataFlag;
+    public void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (UpdataFlag)
+            UpdateCars();
+        if (AcceptanceFlag)
+            AcceptanceCars();
+        Debug.Log(CarsStatus.cars[0].Name);
     }
     public void UpdateCars()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 7; i++)
         {
            CarsStatus.cars[i] = carData[i];
+        }
+    }
+    public void AcceptanceCars()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            carData[i] = CarsStatus.cars[i];
         }
     }
 }
