@@ -12,11 +12,6 @@ public class Item : MonoBehaviour
         Index = index;
     }
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (GameSceneManager.player.transform.position.x + offset_X > transform.position.x)
