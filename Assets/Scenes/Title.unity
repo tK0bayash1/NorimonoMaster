@@ -439,6 +439,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0.01
+--- !u!1 &664613425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664613427}
+  - component: {fileID: 664613426}
+  m_Layer: 0
+  m_Name: ScriptManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &664613426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664613425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb07b06d7117984e95f3a6a9b05280f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carData:
+  - Name: NomalCar
+    Speed: 1
+    JumpNum: 1
+    GetFlag: 1
+  - Name: SportsCar
+    Speed: 2
+    JumpNum: 1
+    GetFlag: 0
+  - Name: Jeep
+    Speed: 2
+    JumpNum: 2
+    GetFlag: 0
+  - Name: Bicycle
+    Speed: 1
+    JumpNum: 3
+    GetFlag: 0
+  - Name: MotorBicycle
+    Speed: 2
+    JumpNum: 3
+    GetFlag: 0
+  - Name: Excavator
+    Speed: 2
+    JumpNum: 2
+    GetFlag: 0
+  - Name: Bulldozer
+    Speed: 2
+    JumpNum: 1
+    GetFlag: 0
+  AcceptanceFlag: 0
+  UpdataFlag: 1
+--- !u!4 &664613427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664613425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 473.96164, y: 776.7772, z: -1352.4564}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811244875
 GameObject:
   m_ObjectHideFlags: 0
