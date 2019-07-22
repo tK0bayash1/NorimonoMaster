@@ -498,6 +498,7 @@ MonoBehaviour:
     JumpNum: 1
     GetFlag: 0
   AcceptanceFlag: 0
+  UpdataFlag: 1
 --- !u!4 &664613427
 Transform:
   m_ObjectHideFlags: 0
