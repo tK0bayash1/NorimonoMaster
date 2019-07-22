@@ -12,13 +12,15 @@ public class CarsStatus : MonoBehaviour
         public float Speed;
         public int JumpNum;
         public bool GetFlag;
+        public float Distance;
 
-        public CarData(string name, float speed, int jumpNum, bool getFlag)
+        public CarData(string name, float speed, int jumpNum, bool getFlag, float distance)
         {
             Name = name;
             Speed = speed;
             JumpNum = jumpNum;
             GetFlag = getFlag;
+            Distance = distance;
         }
      
     }
