@@ -82,6 +82,7 @@ public class ShopMain : MonoBehaviour
             carsStatus.carData[GetItem].GetFlag = true;
             GetFlag = true;
             Running = false;
+            
             ButtonText.text = "Next";
         }
         else

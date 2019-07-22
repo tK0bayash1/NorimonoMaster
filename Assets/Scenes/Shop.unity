@@ -527,7 +527,7 @@ MonoBehaviour:
   MoneyText: {fileID: 1622702750}
   ButtonText: {fileID: 1950492405}
   Prize: {fileID: 1254926463}
-  carsStatus: {fileID: 0}
+  carsStatus: {fileID: 897565258}
   Cost: 1
   ShopWaitTime: 0.18
 --- !u!4 &897565257
@@ -557,33 +557,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carData:
-  - Name: NomalCar
-    Speed: 2
-    JumpNum: 1
-    GetFlag: 1
-  - Name: SportsCar
-    Speed: 3
-    JumpNum: 1
+  - Name: 
+    Speed: 0
+    JumpNum: 0
     GetFlag: 0
-  - Name: Jeep
-    Speed: 2
-    JumpNum: 2
+  - Name: 
+    Speed: 0
+    JumpNum: 0
     GetFlag: 0
-  - Name: Bicycle
-    Speed: 1
-    JumpNum: 3
-    GetFlag: 0
-  - Name: MotorBicycle
-    Speed: 2
-    JumpNum: 3
-    GetFlag: 0
-  - Name: Excavator
-    Speed: 2
-    JumpNum: 2
-    GetFlag: 0
-  - Name: Bulldozer
-    Speed: 2
-    JumpNum: 1
+  - Name: 
+    Speed: 0
+    JumpNum: 0
     GetFlag: 0
   - Name: 
     Speed: 0
@@ -597,6 +581,12 @@ MonoBehaviour:
     Speed: 0
     JumpNum: 0
     GetFlag: 0
+  - Name: 
+    Speed: 0
+    JumpNum: 0
+    GetFlag: 0
+  AcceptanceFlag: 1
+  UpdataFlag: 0
 --- !u!1 &1162510271
 GameObject:
   m_ObjectHideFlags: 0

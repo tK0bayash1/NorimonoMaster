@@ -8,7 +8,10 @@ namespace Assets.Script
 {
     class Vehicle
     {
-        public float JumpPower { private set; get; }
-        public float CanJumpTimes{ private set; get; }
+        public Vehicle() { }
+        public Vehicle(int canJumpTimes,float speed) { CanJumpTimes = canJumpTimes; Speed = speed; }
+        
+        public int CanJumpTimes{ set; get; }
+        public float Speed { set; get; }
     }
 }
