@@ -164,8 +164,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 979845553
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 452b8c0e15b27b1438fe582153fc5179, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -187,9 +187,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 41578299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4bbaee8ecb681419a1422eaf27c08e, type: 3}
+  m_Script: {fileID: 11500000, guid: 413eb345459af4549b0c341d346ff047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset_X: -20
 --- !u!4 &41578302
 Transform:
   m_ObjectHideFlags: 0
@@ -321,6 +322,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709497715597106524, guid: 2935589cf5b44e34fb50a15d946aa29d,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 979845553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709497715597106524, guid: 2935589cf5b44e34fb50a15d946aa29d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8709497715597106527, guid: 2935589cf5b44e34fb50a15d946aa29d,
         type: 3}
@@ -456,6 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277230871}
   - component: {fileID: 1277230870}
+  - component: {fileID: 1277230872}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -497,8 +509,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -763571293
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 669af5c4dd5158247b2ff86ac2e7153b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -519,12 +531,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277230869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.56, z: 0}
+  m_LocalPosition: {x: 0, y: 1.87, z: 0}
   m_LocalScale: {x: 0.955101, y: 0.59697974, z: 0.693}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &1277230872
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277230869}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 1.87, z: 0}
+  m_TranslationOffset: {x: 5.75, y: 3.77, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 204712759}
+    weight: 1
 --- !u!114 &1590352010 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8709497715597106522, guid: 2935589cf5b44e34fb50a15d946aa29d,
@@ -552,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 3005202204622514966, guid: 1c2b80a234b821a46bc64c6000092daf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.65
+      value: 10.41
       objectReference: {fileID: 0}
     - target: {fileID: 3005202204622514966, guid: 1c2b80a234b821a46bc64c6000092daf,
         type: 3}
@@ -604,10 +635,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2807281687659432489, guid: 1c2b80a234b821a46bc64c6000092daf,
+        type: 3}
+      propertyPath: randomDeviationWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807281687659432489, guid: 1c2b80a234b821a46bc64c6000092daf,
+        type: 3}
+      propertyPath: popTiming
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 204712759}
+    - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
+      propertyPath: m_TranslationAtRest.x
+      value: 10.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
+      propertyPath: m_TranslationOffset.x
+      value: 16.16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
 --- !u!1001 &5968651077772408687
