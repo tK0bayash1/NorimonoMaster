@@ -29,6 +29,10 @@ public class CarsStatus : MonoBehaviour
     public bool UpdataFlag;
     public void Awake()
     {
+        if (CarsStatus.cars[0] != null)
+        {
+            AcceptanceCars();
+        }
         if (UpdataFlag)
             UpdateCars();
         if (AcceptanceFlag)
