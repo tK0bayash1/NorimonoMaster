@@ -207,7 +207,7 @@ MonoBehaviour:
   children:
   - {fileID: 5305548528898522572}
   - {fileID: 8771286713695782269}
-  offset: 20
+  offset: 17
 --- !u!1 &8771286713695782269
 GameObject:
   m_ObjectHideFlags: 0

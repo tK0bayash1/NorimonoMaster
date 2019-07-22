@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3005202204622514966}
   - component: {fileID: 2807281687659432489}
+  - component: {fileID: 477497176}
   m_Layer: 0
   m_Name: HurdleCreater
   m_TagString: Untagged
@@ -43,5 +44,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3324dbc7ff2b0924c9815839158d60ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  hurdleTypes: []
+  hurdleTypes:
+  - {fileID: 8933053566521960309, guid: 5147cea3909d14848bc0d3f6b3354249, type: 3}
+  popTiming: 2
+  randomDeviationWidth: 1
+--- !u!1818360608 &477497176
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324282286026552000}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 8.65, y: -3.92, z: 0}
+  m_TranslationOffset: {x: 14.4, y: -2.02, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
