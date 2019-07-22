@@ -106,6 +106,8 @@ public class CollectionManager : MonoBehaviour
 
         _collection.gameObject.SetActive(false); //実績画面
 
+     
+
     }
 
 
