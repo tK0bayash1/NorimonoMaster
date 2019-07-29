@@ -122,7 +122,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _bictex;
-     //   distance = CarsStatus.cars[0].distance;
+        distance = CarsStatus.cars[3].Distance;
         _text.text = "自転車の総移動距離\n" + distance + "km";
         
     }
@@ -131,6 +131,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _nomaltex;
+        distance = CarsStatus.cars[0].Distance;
         _text.text = "普通車の総移動距離\n" + distance + "km";
     }
 
@@ -138,6 +139,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _sporttex;
+        distance = CarsStatus.cars[1].Distance;
         _text.text = "スポーツカーの総移動距離\n" + distance + "km";
     }
 
@@ -145,6 +147,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _jeeptex;
+        distance = CarsStatus.cars[2].Distance;
         _text.text = "ジープの総移動距離\n" + distance + "km";
     }
 
@@ -152,6 +155,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _motortex;
+        distance = CarsStatus.cars[4].Distance;
         _text.text = "バイクの総移動距離\n" + distance + "km";
     }
 
@@ -159,6 +163,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _excatex;
+        distance = CarsStatus.cars[5].Distance;
         _text.text = "ショベルカーの総移動距離\n" + distance + "km";
     }
 
@@ -166,6 +171,7 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _bulltex;
+        distance = CarsStatus.cars[6].Distance;
         _text.text = "ブルドーザーの総移動距離\n" + distance + "km";
     }
 
