@@ -493,7 +493,6 @@ GameObject:
   m_Component:
   - component: {fileID: 897565257}
   - component: {fileID: 897565256}
-  - component: {fileID: 897565258}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -527,7 +526,6 @@ MonoBehaviour:
   MoneyText: {fileID: 1622702750}
   ButtonText: {fileID: 1950492405}
   Prize: {fileID: 1254926463}
-  carsStatus: {fileID: 897565258}
   Cost: 1
   ShopWaitTime: 0.18
 --- !u!4 &897565257
@@ -544,49 +542,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &897565258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897565255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb07b06d7117984e95f3a6a9b05280f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carData:
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  - Name: 
-    Speed: 0
-    JumpNum: 0
-    GetFlag: 0
-  AcceptanceFlag: 1
-  UpdataFlag: 0
 --- !u!1 &1162510271
 GameObject:
   m_ObjectHideFlags: 0
