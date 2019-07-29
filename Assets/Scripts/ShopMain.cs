@@ -20,8 +20,6 @@ public class ShopMain : MonoBehaviour
     private Text ButtonText;
     [SerializeField]
     private Image Prize; //取得物表示用のオブジェクト
-    [SerializeField]
-    private CarsStatus carsStatus;
     static public int Money { get; set; } //所持金
     public int Cost;
     public float ShopWaitTime = 0.2f;
@@ -58,7 +56,6 @@ public class ShopMain : MonoBehaviour
         }
         else if (Running == false)
         {
-            carsStatus.UpdateCars();
             Debug.Log(CarsStatus.cars[2].Name);
             Debug.Log(CarsStatus.cars[2].GetFlag);
             Prize.sprite = Box;
@@ -79,10 +76,9 @@ public class ShopMain : MonoBehaviour
             GetName.text = string.Format("Item :{0} Get!", cars[GetItem]);
             BoardingPermission[GetItem] = true;
             Debug.Log(GetItem);
-            carsStatus.carData[GetItem].GetFlag = true;
+            CarsStatus.cars[GetItem].GetFlag = true;
             GetFlag = true;
             Running = false;
-            carsStatus.UpdateCars();
             ButtonText.text = "Next";
         }
         else

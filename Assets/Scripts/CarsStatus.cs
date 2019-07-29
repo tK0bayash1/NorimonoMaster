@@ -26,32 +26,22 @@ public class CarsStatus : MonoBehaviour
     }
 
     public static CarData[] cars = new CarData[10];
-    public CarData[] carData = new CarData[10];
-    public bool AcceptanceFlag;
-    public bool UpdataFlag;
+    public static bool New;
     public void Awake()
     {
-        if (CarsStatus.cars[0] != null)
-        {
-            AcceptanceCars();
+        if (New == false) {
+            cars = new CarData[7];
+            cars[0] = new CarData("NomalCar", 1, 1, true, 0);
+            cars[1] = new CarData("SportsCar", 2, 1, false, 0);
+            cars[2] = new CarData("Jeep", 2, 2, false, 0);
+            cars[3] = new CarData("Bicycle", 1, 3, false, 0);
+            cars[4] = new CarData("MotorBicycle", 2, 3, false, 0);
+            cars[5] = new CarData("Excavator", 2, 2, false, 0);
+            cars[6] = new CarData("Bulldozer", 2, 1, false, 0);
+            New = true;
         }
-        if (UpdataFlag)
-            UpdateCars();
-        if (AcceptanceFlag)
-            AcceptanceCars();
+        for(int i = 0;i < 7;i++)
+        Debug.Log(cars[i].GetFlag);
     }
-    public void UpdateCars()
-    {
-        for (int i = 0; i < 7; i++)
-        {
-           CarsStatus.cars[i] = carData[i];
-        }
-    }
-    public void AcceptanceCars()
-    {
-        for (int i = 0; i < 7; i++)
-        {
-            carData[i] = CarsStatus.cars[i];
-        }
-    }
+
 }
