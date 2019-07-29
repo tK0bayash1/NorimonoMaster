@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class CoinGroup : MonoBehaviour
 {
-    public int Index { get; set; }
-    [SerializeField] float offset_X = -20;
-
-    void Create(int index)
-    {
-        Index = index;
-    }
-
-    void Update()
+    float offset_X = -20.0f;
+    protected void Update()
     {
         if (GameSceneManager.player.transform.position.x + offset_X > transform.position.x)
         {

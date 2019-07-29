@@ -36,6 +36,33 @@ public class CollectionManager : MonoBehaviour
     [SerializeField]
     private GameObject _collection;
 
+    [SerializeField]
+    private Image _image;
+
+    [SerializeField]
+    private Sprite _bictex;
+
+    [SerializeField]
+    private Sprite _nomaltex;
+
+    [SerializeField]
+    private Sprite _sporttex;
+
+    [SerializeField]
+    private Sprite _motortex;
+
+    [SerializeField]
+    private Sprite _excatex;
+
+    [SerializeField]
+    private Sprite _bulltex;
+
+    [SerializeField]
+    private Sprite _jeeptex;
+
+    [SerializeField]
+    private Text _text;
+
 
 
     // Start is called before the first frame update
@@ -79,6 +106,8 @@ public class CollectionManager : MonoBehaviour
 
         _collection.gameObject.SetActive(false); //実績画面
 
+     
+
     }
 
 
@@ -90,36 +119,51 @@ public class CollectionManager : MonoBehaviour
     public void BicycleOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _bictex;
+        _text.text = "自転車の総移動距離";
+        
     }
 
     public void NomalCarOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _nomaltex;
+        _text.text = "普通車の総移動距離";
     }
 
     public void SportCarOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _sporttex;
+        _text.text = "スポーツカーの総移動距離";
     }
 
     public void JeepOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _jeeptex;
+        _text.text = "ジープの総移動距離";
     }
 
     public void MotorcycleOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _motortex;
+        _text.text = "バイクの総移動距離";
     }
 
     public void ExcavatorOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _excatex;
+        _text.text = "ショベルカーの総移動距離";
     }
 
     public void BulldozerOnClick()
     {
         _collection.gameObject.SetActive(true);
+        _image.sprite = _bulltex;
+        _text.text = "ブルドーザーの総移動距離";
     }
 
     public void CancelOnClick()

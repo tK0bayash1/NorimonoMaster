@@ -623,6 +623,15 @@ MonoBehaviour:
   _bulldozer: {fileID: 56072852}
   _cancel: {fileID: 797784230}
   _collection: {fileID: 1074638162}
+  _image: {fileID: 1370961550}
+  _bictex: {fileID: 21300000, guid: fa9b031c8377d834e8f92aa664a28baa, type: 3}
+  _nomaltex: {fileID: 21300000, guid: 5ab712864594a1a4c974cb8d7ad56f07, type: 3}
+  _sporttex: {fileID: 21300000, guid: d2a07182234768b4f9a23c379a3455b9, type: 3}
+  _motortex: {fileID: 21300000, guid: 5cb7f22afad8dab43bdadd8cf478ee92, type: 3}
+  _excatex: {fileID: 21300000, guid: 849de63724d03784aa7bfc9f6f661bfa, type: 3}
+  _bulltex: {fileID: 21300000, guid: 7242ec6fdbfa258408c76b29046e7189, type: 3}
+  _jeeptex: {fileID: 21300000, guid: 7c3eccda8edf4dc46bca0d9e33297d39, type: 3}
+  _text: {fileID: 401397593}
 --- !u!4 &147182447
 Transform:
   m_ObjectHideFlags: 0
@@ -1151,8 +1160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: -146}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: 0, y: -146}
+  m_SizeDelta: {x: 1078.3, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401397593
 MonoBehaviour:
@@ -2088,7 +2097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 180}
+  m_AnchoredPosition: {x: 0, y: 180}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370961550
