@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeedAjuster = 1.0f;
 
     private int vehicleIndex; // 乗り物の配列番号
+    [SerializeField] private int startingVehicle = 0;
 
     //[SerializeField] private bool moveWithCamera = true;
     private float defaultY;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
         if (rig == null) rig = gameObject.AddComponent<Rigidbody2D>();  // rigidbodyの取得チェック
         rig.constraints = RigidbodyConstraints2D.FreezePositionY;
 
-        vehicleIndex = 0; // 最初の乗り物
+        vehicleIndex = startingVehicle; // 最初の乗り物
 
         defaultY = transform.position.y;
     }
