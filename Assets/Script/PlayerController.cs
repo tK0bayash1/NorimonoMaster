@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Script;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,17 +12,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpPower = 1.0f;   // ジャンプ力
     [SerializeField] private float movingAmount = 0;    // 移動量
     public float MovingAmount { get { return movingAmount; } } 
-
-    private Vehicle vehicle;    // プレイヤーが使っている乗り物
-    //private CarsStatus carsStatus;    // プレイヤーが使っている乗り物
+    
+    private int vehicleIndex; // 乗り物の配列番号
 
     void Start()
     {
         if (GetComponent<BoxCollider2D>() == null) gameObject.AddComponent<BoxCollider2D>();    // コライダーがあるかどうか
         rig = GetComponent<Rigidbody2D>();  // rigidbodyの取得
         if (rig == null) rig = gameObject.AddComponent<Rigidbody2D>();  // rigidbodyの取得チェック
-        if (vehicle == null) { vehicle = new Vehicle(2, 0.1f); }    // 乗り物の取得チェック
-        //if(CarsStatus == null) { carsStatus = new carsStatus(); }
+
+        vehicleIndex = 0; // 最初の乗り物
     }
 
     void Update()
@@ -62,8 +60,7 @@ public class PlayerController : MonoBehaviour
     // ジャンプ
     private bool Jump()
     {
-        //if (currentJumpNum < carsStatus.jumpNum)
-        if (currentJumpNum < vehicle.CanJumpTimes)  // ジャンプ回数が限界を超えているか
+        if (currentJumpNum < CarsStatus.cars[vehicleIndex].JumpNum)    // ジャンプ回数が限界を超えているか
         {
             currentJumpNum += 1;
             rig.velocity = (new Vector3(0.0f, jumpPower));
@@ -83,8 +80,7 @@ public class PlayerController : MonoBehaviour
     // 移動
     private void Move()
     {
-        //movingAmount += carsStatus.speed * Time.deltaTime;
-        movingAmount += vehicle.Speed * Time.deltaTime;
+        movingAmount += CarsStatus.cars[vehicleIndex].Speed * Time.deltaTime;
     }
 
     // 乗り換え
@@ -104,8 +100,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.tag == "Vehicle") // 乗り物オブジェクトに接触したら
         {
-            //carsStatus = other.GetComponent<CarsStatus>();
-            vehicle = other.GetComponent<Vehicle>();    // 新しいVehicleに乗り換え
+
+            vehicleIndex = other.GetComponent<Item>().Index;    // 新しいVehicleに乗り換え
             state = State.Transferring;
         }
     }
