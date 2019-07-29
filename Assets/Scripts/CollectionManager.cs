@@ -63,6 +63,8 @@ public class CollectionManager : MonoBehaviour
     [SerializeField]
     private Text _text;
 
+    private float distance;
+
 
 
     // Start is called before the first frame update
@@ -120,7 +122,8 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _bictex;
-        _text.text = "自転車の総移動距離";
+     //   distance = CarsStatus.cars[0].distance;
+        _text.text = "自転車の総移動距離\n" + distance + "km";
         
     }
 
@@ -128,42 +131,42 @@ public class CollectionManager : MonoBehaviour
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _nomaltex;
-        _text.text = "普通車の総移動距離";
+        _text.text = "普通車の総移動距離\n" + distance + "km";
     }
 
     public void SportCarOnClick()
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _sporttex;
-        _text.text = "スポーツカーの総移動距離";
+        _text.text = "スポーツカーの総移動距離\n" + distance + "km";
     }
 
     public void JeepOnClick()
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _jeeptex;
-        _text.text = "ジープの総移動距離";
+        _text.text = "ジープの総移動距離\n" + distance + "km";
     }
 
     public void MotorcycleOnClick()
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _motortex;
-        _text.text = "バイクの総移動距離";
+        _text.text = "バイクの総移動距離\n" + distance + "km";
     }
 
     public void ExcavatorOnClick()
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _excatex;
-        _text.text = "ショベルカーの総移動距離";
+        _text.text = "ショベルカーの総移動距離\n" + distance + "km";
     }
 
     public void BulldozerOnClick()
     {
         _collection.gameObject.SetActive(true);
         _image.sprite = _bulltex;
-        _text.text = "ブルドーザーの総移動距離";
+        _text.text = "ブルドーザーの総移動距離\n" + distance + "km";
     }
 
     public void CancelOnClick()
