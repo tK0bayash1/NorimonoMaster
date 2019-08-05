@@ -80,6 +80,7 @@ public class ShopMain : MonoBehaviour
             GetFlag = true;
             Running = false;
             ButtonText.text = "Next";
+            SaveData.DataSave();
         }
         else
         {
