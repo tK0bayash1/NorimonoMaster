@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private enum State { Running, Jumping, Landing, Transferring }
-    [SerializeField]private State state = State.Running;    // プレイヤーのステータス
+    private enum State { Running, Jumping, Landing, Transferring, GameOver }
+    [SerializeField] private State state = State.Running;    // プレイヤーのステータス
 
     private Rigidbody2D rig;
     [SerializeField] private int currentJumpNum = 0;  // 現在のジャンプ回数
@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private bool moveWithCamera = true;
     private float defaultY;
 
+    private SpriteRenderer sprite;
+
     void Start()
     {
         if (GetComponent<BoxCollider2D>() == null) gameObject.AddComponent<BoxCollider2D>();    // コライダーがあるかどうか
@@ -30,12 +32,16 @@ public class PlayerController : MonoBehaviour
         vehicleIndex = startingVehicle; // 最初の乗り物
 
         defaultY = transform.position.y;
+
+        sprite = this.gameObject.GetComponent<SpriteRenderer>();    // 表示させるsprite
     }
 
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.L)) { Debug.Log(CarsStatus.cars[vehicleIndex].JumpNum); }
-
+        if (Input.GetKeyDown(KeyCode.R)) { GameOver(); }
+#endif
         switch (state)
         {
             case State.Running: //走っている
@@ -67,6 +73,11 @@ public class PlayerController : MonoBehaviour
             case State.Transferring:    // 乗り換え
                 {
                     state = State.Running;
+                }
+                break;
+            case State.GameOver:
+                {
+                    Move();
                 }
                 break;
         }
@@ -102,7 +113,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         float amount = CarsStatus.cars[vehicleIndex].Speed * Time.deltaTime * moveSpeedAjuster;
-        transform.Translate(new Vector2(amount,0));
+        transform.Translate(new Vector2(amount, 0));
         movingAmount += amount;
     }
 
@@ -110,7 +121,7 @@ public class PlayerController : MonoBehaviour
     private void Transfer()
     {
     }
-    
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.tag == "Respawn")    // 地面に接触したら
@@ -126,5 +137,13 @@ public class PlayerController : MonoBehaviour
             vehicleIndex = other.GetComponent<Item>().Index;    // 新しいVehicleに乗り換え
             state = State.Transferring;
         }
+    }
+
+    private void GameOver()
+    {
+        state = State.GameOver;
+        sprite.enabled = false;
+        
+        ResultManager.resultWindow.ShowResult(movingAmount);
     }
 }

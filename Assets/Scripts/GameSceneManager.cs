@@ -22,4 +22,6 @@ public class GameSceneManager : MonoBehaviour
 
         SceneManager.LoadScene(0);
     }
+
+    public void OnClickButton(int num) { SceneManager.LoadScene(num); }
 }
