@@ -39,10 +39,12 @@ public class CarsStatus : MonoBehaviour
             cars[4] = new CarData("MotorBicycle", 2, 3, false, 0);
             cars[5] = new CarData("Excavator", 2, 2, false, 0);
             cars[6] = new CarData("Bulldozer", 2, 1, false, 0);
+            if (System.IO.File.Exists($"{ Application.persistentDataPath }\\SaveData.json") == true)
+                SaveData.DataLoad();
             New = true;
         }
         for (int i = 0; i < 7; i++)
-            Debug.Log(cars[i].GetFlag);
+            Debug.Log($"{cars[i].Name} {cars[i].GetFlag}");
     }
 
 }
