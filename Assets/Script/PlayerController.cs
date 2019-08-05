@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         state = State.GameOver;
         sprite.enabled = false;

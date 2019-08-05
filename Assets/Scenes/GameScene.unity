@@ -1382,7 +1382,7 @@ PrefabInstance:
     - target: {fileID: 3005202204622514966, guid: 1c2b80a234b821a46bc64c6000092daf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.92
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 3005202204622514966, guid: 1c2b80a234b821a46bc64c6000092daf,
         type: 3}
@@ -1450,6 +1450,22 @@ PrefabInstance:
     - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
       propertyPath: m_TranslationOffset.x
       value: 16.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
+      propertyPath: m_AffectTranslationY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
+      propertyPath: m_AffectTranslationZ
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
+      propertyPath: m_TranslationAtRest.y
+      value: -2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 477497176, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
+      propertyPath: m_TranslationOffset.y
+      value: -0.21999991
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2b80a234b821a46bc64c6000092daf, type: 3}
@@ -1525,6 +1541,16 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 204712759}
+    - target: {fileID: 5288589750047034779, guid: 159873bfe7ff87648be3db7bd715a586,
+        type: 3}
+      propertyPath: m_AffectTranslationY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288589750047034779, guid: 159873bfe7ff87648be3db7bd715a586,
+        type: 3}
+      propertyPath: m_AffectTranslationZ
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159873bfe7ff87648be3db7bd715a586, type: 3}
 --- !u!1001 &5968651077772408687
