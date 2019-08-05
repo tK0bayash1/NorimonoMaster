@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private State state = State.Running;    // プレイヤーのステータス
 
     private Rigidbody2D rig;
+    private BoxCollider2D collider;
     [SerializeField] private int currentJumpNum = 0;  // 現在のジャンプ回数
     [SerializeField] private float jumpPower = 1.0f;   // ジャンプ力
     [SerializeField] private float movingAmount = 0;    // 移動量
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();  // rigidbodyの取得
         if (rig == null) rig = gameObject.AddComponent<Rigidbody2D>();  // rigidbodyの取得チェック
         rig.constraints = RigidbodyConstraints2D.FreezePositionY;
+        collider = GetComponent<BoxCollider2D>();
 
         vehicleIndex = startingVehicle; // 最初の乗り物
 
@@ -143,6 +145,7 @@ public class PlayerController : MonoBehaviour
     {
         state = State.GameOver;
         sprite.enabled = false;
+        collider.enabled = false;
         
         ResultManager.resultWindow.ShowResult(movingAmount);
     }
