@@ -21,9 +21,12 @@ public abstract class Hurdle : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("アウツ!");
+        if (other.tag == "Player")
+        {
+            GameSceneManager.player.GameOver();
+        }
     }
 
     abstract protected void Move();
