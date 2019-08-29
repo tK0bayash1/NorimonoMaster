@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float MovingAmount { get { return movingAmount; } }
     [SerializeField] private float moveSpeedAjuster = 1.0f;
 
-    private int vehicleIndex; // 乗り物の配列番号
+    [HideInInspector] public int vehicleIndex; // 乗り物の配列番号
     [SerializeField] private int startingVehicle = 0;
 
     //[SerializeField] private bool moveWithCamera = true;
@@ -120,8 +120,10 @@ public class PlayerController : MonoBehaviour
     }
 
     // 乗り換え
-    private void Transfer()
+    public void Transfer(Item hit)
     {
+        vehicleIndex = hit.Index;
+        GetComponent<SpriteRenderer>().sprite = hit.CarImage;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -134,11 +136,11 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Vehicle") // 乗り物オブジェクトに接触したら
-        {
-            vehicleIndex = other.GetComponent<Item>().Index;    // 新しいVehicleに乗り換え
-            state = State.Transferring;
-        }
+        //if (other.tag == "Vehicle") // 乗り物オブジェクトに接触したら
+        //{
+        //    vehicleIndex = other.GetComponent<Item>().Index;    // 新しいVehicleに乗り換え
+        //    state = State.Transferring;
+        //}
     }
 
     public void GameOver()
@@ -148,5 +150,6 @@ public class PlayerController : MonoBehaviour
         collider.enabled = false;
         
         ResultManager.resultWindow.ShowResult(movingAmount);
+        CarsStatus.cars[vehicleIndex].Distance += movingAmount;
     }
 }
