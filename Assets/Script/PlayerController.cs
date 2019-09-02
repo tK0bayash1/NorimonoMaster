@@ -50,9 +50,8 @@ public class PlayerController : MonoBehaviour
             case State.Running: //走っている
                 {
                     Move();
-                    if (Input.GetKeyDown(KeyCode.Space))    // ジャンプ
+                    if (Input.GetKey(KeyCode.Space))    // ジャンプ
                     {
-                        audioManager.Jump.Play();
                         Jump();
                     }
                 }
@@ -92,6 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentJumpNum < CarsStatus.cars[vehicleIndex].JumpNum)    // ジャンプ回数が限界を超えているか
         {
+            audioManager.Jump.Play();
             rig.constraints = RigidbodyConstraints2D.None;
 
             currentJumpNum += 1;

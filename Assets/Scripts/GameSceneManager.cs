@@ -14,6 +14,14 @@ public class GameSceneManager : MonoBehaviour
         player = _playerObj;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnClickButton(0);
+        }
+    }
+
     public void GameOver()
     {
         Debug.Log("you dead...");

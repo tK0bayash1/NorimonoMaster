@@ -147,7 +147,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a215a383e601afd49b4285e8e05459d2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -274,7 +274,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2ecdfac81139f574a91d1a1f463ef281, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -370,7 +370,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a948337412e622a489caadbe255de568, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -466,7 +466,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c45af9cc1cf7d8a4b8192bcc26f92588, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -562,7 +562,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: efdf6e53af13f324daee39b453fd41dc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -658,7 +658,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ce61460152d6c544996e1fb07f7a7fd9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1017,7 +1017,7 @@ PrefabInstance:
     - target: {fileID: 8709497715597106522, guid: 2935589cf5b44e34fb50a15d946aa29d,
         type: 3}
       propertyPath: jumpPower
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8709497715597106522, guid: 2935589cf5b44e34fb50a15d946aa29d,
         type: 3}
@@ -1199,7 +1199,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1482,7 +1482,7 @@ PositionConstraint:
   m_TranslationAtRest: {x: 0, y: 0, z: -10}
   m_TranslationOffset: {x: 5.75, y: 1.9, z: -10}
   m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
+  m_AffectTranslationY: 0
   m_AffectTranslationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 0
@@ -1581,7 +1581,7 @@ PositionConstraint:
   m_TranslationAtRest: {x: 0, y: 1.87, z: 0}
   m_TranslationOffset: {x: 5.75, y: 3.77, z: 0}
   m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
+  m_AffectTranslationY: 0
   m_AffectTranslationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 0
@@ -1673,7 +1673,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2257,8 +2257,8 @@ PositionConstraint:
   m_GameObject: {fileID: 6357264150752130287}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 10.41, y: 2.49, z: 0}
-  m_TranslationOffset: {x: 16.16, y: 4.39, z: 0}
+  m_TranslationAtRest: {x: 10.41, y: 0, z: 0}
+  m_TranslationOffset: {x: 16.16, y: 1.9, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 0
   m_AffectTranslationZ: 0
@@ -2287,7 +2287,7 @@ PrefabInstance:
     - target: {fileID: 5340231093356079823, guid: 1eca6f69bd7e6294fab473be7c83e9be,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340231093356079823, guid: 1eca6f69bd7e6294fab473be7c83e9be,
         type: 3}
