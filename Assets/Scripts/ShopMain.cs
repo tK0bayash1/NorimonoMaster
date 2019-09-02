@@ -19,6 +19,10 @@ public class ShopMain : MonoBehaviour
     [SerializeField]
     private Text ButtonText;
     [SerializeField]
+    private AudioSource SeAudio;
+    [SerializeField]
+    private AudioSource Se2Audio;
+    [SerializeField]
     private Image Prize; //取得物表示用のオブジェクト
     static public int Money { get; set; } //所持金
     public int Cost;
@@ -47,7 +51,7 @@ public class ShopMain : MonoBehaviour
 
     public void BuyNewCars()
     {
-        if (GetFlag == false && Running == false)
+        if (GetFlag == false && Running == false && Money > 0)
         {
             Running = true;
             Money -= Cost;
@@ -73,6 +77,7 @@ public class ShopMain : MonoBehaviour
         Prize.sprite = CarsTexture[GetItem];
         if (i == 10)
         {
+            SeAudio.Play();
             GetName.text = string.Format("Item :{0} Get!", cars[GetItem]);
             BoardingPermission[GetItem] = true;
             Debug.Log(GetItem);
@@ -85,6 +90,7 @@ public class ShopMain : MonoBehaviour
         else
         {
             i++;
+            Se2Audio.Play();
             StartCoroutine(DelayMove(ShopWaitTime, i));
         }
     }
