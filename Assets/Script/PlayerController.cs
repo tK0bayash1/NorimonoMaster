@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private enum State { Running, Jumping, Landing, Transferring, GameOver }
     [SerializeField] private State state = State.Running;    // プレイヤーのステータス
 
+    [SerializeField] InGameAudioManager audioManager;
     private Rigidbody2D rig;
     private BoxCollider2D collider;
     [SerializeField] private int currentJumpNum = 0;  // 現在のジャンプ回数
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
                     Move();
                     if (Input.GetKeyDown(KeyCode.Space))    // ジャンプ
                     {
+                        audioManager.Jump.Play();
                         Jump();
                     }
                 }
